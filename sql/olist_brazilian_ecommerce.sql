@@ -1,5 +1,6 @@
-/* 
-Exploratory Data Analysis in SQL
+/* Exploratory Data Analysis in SQL.
+
+In this SQL files, we will perform some queries to answer the following business questions:
 
 1) A Sales Manager needs to understand the trends and identify any significant changes in sales. Calculate a sales performance report quarter over quarter.
 2) To design better distribution plans for the year 2018, the team need to identify the performance and percentage of each product to the overall sales during the year 2017 
@@ -7,28 +8,13 @@ Exploratory Data Analysis in SQL
 4) To evaluate the efficiency in order fulfillment, the team needs to identify the average lead time for each stage from purchasing to delivery.
 5) Which percentange of the orders were delivered on time?
 6) Which are the customers' preferred payment methods?
-
 7) Calculate the average and median price per customer?  
-
 8) To enhance target marketing and logistics planning, the operations teams needs to understand where the main customers are located. 
 9) To focus on building and maintaining strong relationships with the key suppliers, the team needs to identify the states where the main customers are located.
 10) How is the current status of each order the operation? The idea is to identify any bottenecks and streamline processes to ensure efficient order management.
-
-Covered topics: 
-- Data Manipulation: SELECT statements, JOIN operations, subqueries, aggregation (sum,count,having,avg), SORTING and LIMIT
-(colocar um ranking)
-- Data Transformation: CAST, CONVERT, CONCAT, SUBSTRING, REPLACE, DATEDIFF, DATEADD, FORMAT, CASE statements, NULL handling (isnull, nullif, coalesce)
-- Data Analysis: include examples that showcase your ability to perform calculations, generate insights and derive meaning information from the data. 
-ROW_NUMBER, RANK, LAG, LEAD / Data Aggregation (grouping sets, rollup, cube) / CTE / Data Filtering and conditional analysis / Statistical functions (avg, sum, stddev, etc)
-- Data Visualization: 
---creating views that encapsulate complex queries for easier acess and reporting
---pivot tables
---stored procedures
---extracting insights
 */
 
--- 1) A Sales Manager needs to understand the trends and identify any significant changes in sales. Calculate a sales performance report quarter over quarter.
-
+--1) A Sales Manager needs to understand the trends and identify any significant changes in sales. Calculate a sales performance report quarter over quarter.
 -- Analyzing the quantity of orders in each year and month
 SELECT 
 	DATE(DATE_TRUNC('month', order_purchase_timestamp)) AS purchase_year, 
@@ -37,10 +23,10 @@ FROM olist_orders
 GROUP BY 1
 ORDER BY 1 DESC
 
--- We do not have a fully olist_orders data from years 2016, 2017 and 2018. In that way, we will perform a quarterly sales performance from 2016-10-01 until 2018-09-01
+--We do not have a fully olist_orders data from years 2016, 2017 and 2018. 
+--In that way, we will perform a quarterly sales performance from 2016-10-01 until 2018-09-01
 
-
--- As known that each order_id can contain multiple products, we used a CTE to aggregate at order_id level by total products, price and freight value
+--To get a total price by order, we used a CTE to aggregate at order level, because a order can contain multiple products/items.
 WITH aggregate_order_items AS(
 
 SELECT 
@@ -106,11 +92,11 @@ FROM(
 
 ORDER BY 2 DESC
 
-/*
-3) The stakeholders are interested in a Pareto analysis to determine which products are driving the majority of the results. Identify the top products that contribute to 80% of the sales?
-*/
 
-WITH product_categories_english AS( --aggregating at product category level
+--3) The stakeholders are interested in a Pareto analysis to determine which products are driving the majority of the results. Identify the top products that contribute to 80% of the sales?
+
+
+WITH product_categories_english AS( 
 
 SELECT 
 	i.order_id,
