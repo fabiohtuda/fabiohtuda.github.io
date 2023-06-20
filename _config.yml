@@ -1,13 +1,12 @@
 title: Fábio Tuda # your name (or website title) here
 logo: "/images/profile_picture.jpeg" # your photo (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
-  Data Analyst & BI Developer. Transforming complex datasets into actionable insights
-  <br><br>
 
-Skills: SQL | Tableau | PowerBI | Excel | Python
-
+  Fábio Tuda
   <br><br>
-  <a href="https://www.linkedin.com/in/fabiohtuda/?locale=en_US">View My LinkedIn Profile</a> 
+  Transforming complex datasets into actionable insights. Main skills: SQL, Tableau, PowerBI, Excel, Python, Salesforce CRM
+  <br><br>
+  <a href="https://www.linkedin.com/in/fabiohtuda/">View My LinkedIn Profile</a> 
   
 remote_theme: pages-themes/minimal@v0.2.0
 plugins:
