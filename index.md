@@ -2,11 +2,14 @@
 
 ---
 
-### SQL
+### SQL 
 
-[E-commerce project using SQL](/sql/ecommerce_project.md)
-<img src="images/ecommerce_picture.jpeg?raw=true"/>
 Using SQL, I explored a Brazilian ecommerce public dataset of orders made at Olist Store. The dataset has information of 100k orders from 2016 to 2018 made at multiple marketplaces in Brazil. 
+
+
+[Click here to see the full story](/sql/ecommerce_project.md)
+<img src="images/ecommerce_picture.jpeg?raw=true"/>
+
 
 ---
 [Project 2 Title](/pdf/sample_presentation.pdf)
