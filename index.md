@@ -5,7 +5,7 @@
 ### SQL
 
 [E-commerce project using SQL](/sql/ecommerce_project.md)
-<img src="images/ecommerce.jpeg?raw=true"/>
+<img src="images/ecommerce_picture.jpeg?raw=true"/>
 Using SQL, I explored a Brazilian ecommerce public dataset of orders made at Olist Store. The dataset has information of 100k orders from 2016 to 2018 made at multiple marketplaces in Brazil. 
 
 ---
