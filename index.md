@@ -4,7 +4,7 @@
 
 ### SQL
 
-[E-commerce project using SQL](/sample_page)
+[E-commerce project using SQL](/sql/ecommerce_project)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 Using SQL, I explored an Brazilian e-commerce dataset, provided by Olist.
 
