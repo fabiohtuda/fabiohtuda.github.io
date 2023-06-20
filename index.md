@@ -4,9 +4,9 @@
 
 ### SQL
 
-[E-commerce project using SQL](/sql/ecommerce_project)
+[E-commerce project using SQL](/sql/ecommerce_project.md)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
-Using SQL, I explored an Brazilian e-commerce dataset, provided by Olist.
+Using SQL, I explored a Brazilian ecommerce public dataset of orders made at Olist Store. The dataset has information of 100k orders from 2016 to 2018 made at multiple marketplaces in Brazil. 
 
 ---
 [Project 2 Title](/pdf/sample_presentation.pdf)
